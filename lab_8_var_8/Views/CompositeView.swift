@@ -33,12 +33,38 @@ import UIKit
             transform.translatedBy(x: frame.size.height/4, y: frame.size.width/4).scaledBy(x: 0.5, y: 0.5)
         )
         
-    
-        
-        
-       
-        
         layer.addSublayer(tetragonLayer)
         layer.addSublayer(starLayer)
     }
+    
+    @IBAction func tap(sender: AnyObject)
+     {
+    
+        self.backgroundColor = UIColor.green
+        
+    }
+   
+    @IBAction func pinch(sender: AnyObject)
+     {
+     
+        self.backgroundColor = UIColor.red
+     }
+  
+     @IBAction func rotation(sender: AnyObject)
+     {
+    
+        self.backgroundColor = UIColor.blue
+     }
+  
+     @IBAction func swipe(sender: AnyObject)
+     {
+    
+        self.backgroundColor = UIColor.gray
+     }
+ 
+     @IBAction func longPress(sender: AnyObject)
+     {
+     
+        self.backgroundColor = UIColor.orange
+     }
 }

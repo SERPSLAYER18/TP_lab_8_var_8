@@ -16,39 +16,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Rp-FO-InN" customClass="TetragonView" customModule="lab_8_var_8" customModuleProvider="target">
-                                <rect key="frame" x="20" y="87" width="120" height="115"/>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ZA-uS-0rY" customClass="StarView" customModule="lab_8_var_8" customModuleProvider="target">
+                                <rect key="frame" x="193" y="87" width="147" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRV-Or-RYF" customClass="SubtractionView" customModule="lab_8_var_8" customModuleProvider="target">
+                                <rect key="frame" x="211" y="674" width="152" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Rp-FO-InN" customClass="TetragonView" customModule="lab_8_var_8" customModuleProvider="target">
+                                <rect key="frame" x="28" y="412" width="120" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ZA-uS-0rY" customClass="StarView" customModule="lab_8_var_8" customModuleProvider="target">
-                                <rect key="frame" x="193" y="87" width="147" height="159"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRV-Or-RYF" customClass="SubtractionView" customModule="lab_8_var_8" customModuleProvider="target">
-                                <rect key="frame" x="12" y="301" width="152" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hJ-by-gp8" customClass="CompositeView" customModule="lab_8_var_8" customModuleProvider="target">
-                                <rect key="frame" x="193" y="301" width="152" height="142"/>
+                                <rect key="frame" x="120" y="398" width="152" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wm3-lN-lq1" appends="YES" id="PYP-Tc-e0y"/>
+                                    <outletCollection property="gestureRecognizers" destination="NkR-XS-vWS" appends="YES" id="qEO-hn-WU6"/>
+                                    <outletCollection property="gestureRecognizers" destination="RFN-5V-3t9" appends="YES" id="SMu-lo-5Km"/>
+                                    <outletCollection property="gestureRecognizers" destination="R8j-kb-acs" appends="YES" id="9Sk-uG-B5x"/>
+                                    <outletCollection property="gestureRecognizers" destination="W0q-wJ-wKz" appends="YES" id="6Lz-sp-NiS"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="starView" destination="1ZA-uS-0rY" id="Js9-Vl-f0x"/>
-                        <outlet property="tetragonView" destination="6Rp-FO-InN" id="dfg-Ie-vuk"/>
+                        <outlet property="Star" destination="1ZA-uS-0rY" id="Aoh-0l-nEl"/>
+                        <outlet property="Tetragon" destination="6Rp-FO-InN" id="qQF-Rm-Qq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Wm3-lN-lq1">
+                    <connections>
+                        <action selector="longPressWithSender:" destination="5hJ-by-gp8" id="gTz-aq-HAn"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="NkR-XS-vWS">
+                    <connections>
+                        <action selector="swipeWithSender:" destination="5hJ-by-gp8" id="tct-Yf-x3G"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <rotationGestureRecognizer id="RFN-5V-3t9">
+                    <connections>
+                        <action selector="rotationWithSender:" destination="5hJ-by-gp8" id="6RP-yH-UoB"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <tapGestureRecognizer id="R8j-kb-acs">
+                    <connections>
+                        <action selector="tapWithSender:" destination="5hJ-by-gp8" id="T9z-io-hbm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="W0q-wJ-wKz">
+                    <connections>
+                        <action selector="pinchWithSender:" destination="5hJ-by-gp8" id="vzV-v1-cx5"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="89.732142857142847"/>
         </scene>
