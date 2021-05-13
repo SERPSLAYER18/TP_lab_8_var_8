@@ -16,36 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ZA-uS-0rY" customClass="StarView" customModule="lab_8_var_8" customModuleProvider="target">
+                                <rect key="frame" x="193" y="87" width="147" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRV-Or-RYF" customClass="SubtractionView" customModule="lab_8_var_8" customModuleProvider="target">
+                                <rect key="frame" x="211" y="490" width="152" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hJ-by-gp8" customClass="CompositeView" customModule="lab_8_var_8" customModuleProvider="target">
+                                <rect key="frame" x="193" y="301" width="152" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Rp-FO-InN" customClass="TetragonView" customModule="lab_8_var_8" customModuleProvider="target">
-                                <rect key="frame" x="20" y="87" width="120" height="115"/>
+                                <rect key="frame" x="28" y="412" width="120" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ZA-uS-0rY" customClass="StarView" customModule="lab_8_var_8" customModuleProvider="target">
-                                <rect key="frame" x="193" y="87" width="147" height="159"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRV-Or-RYF" customClass="SubtractionView" customModule="lab_8_var_8" customModuleProvider="target">
-                                <rect key="frame" x="12" y="301" width="152" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hJ-by-gp8" customClass="CompositeView" customModule="lab_8_var_8" customModuleProvider="target">
-                                <rect key="frame" x="193" y="301" width="152" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="starView" destination="1ZA-uS-0rY" id="Js9-Vl-f0x"/>
-                        <outlet property="tetragonView" destination="6Rp-FO-InN" id="dfg-Ie-vuk"/>
+                        <outlet property="Star" destination="1ZA-uS-0rY" id="Aoh-0l-nEl"/>
+                        <outlet property="Tetragon" destination="6Rp-FO-InN" id="qQF-Rm-Qq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
